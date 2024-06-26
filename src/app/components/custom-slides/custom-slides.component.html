@@ -1,0 +1,38 @@
+<div class="ion-padding">
+  <div class="main-title">
+    <ion-label *ngIf="slideProp.mainTitle">
+      {{ slideProp.mainTitle }}
+    </ion-label>
+    <ion-icon
+      *ngIf="slideProp.mainIcon"
+      [name]="slideProp.mainIcon"
+      color="primary"
+    ></ion-icon>
+  </div>
+
+  <div *ngIf="slideProp?.slides?.length" class="slider-wrapper">
+    <ion-button
+      *ngFor="let slide of slideProp.slides"
+      [style]="'background-image: url(' + slide.backgroundImage + ')'"
+      class="slide-card ion-no-padding"
+      fill="clear"
+      color="light"
+    >
+      <div class="button-slide" *ngIf="slide.hasNewButton">
+        <ion-icon
+          slot="start"
+          name="add-circle-outline"
+          *ngIf="slide.showIcon"
+        ></ion-icon>
+        <ion-label>{{
+          slide.buttonLabel
+        }}</ion-label>
+      </div>
+
+      <div class="button-slide-type2" *ngIf="!slide.hasNewButton">
+        <p *ngIf="slide.buttonDescription" class="slide-description">{{slide.buttonDescription}}</p>
+        <p class="slide-label">{{slide.buttonLabel}}</p>
+      </div>
+    </ion-button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.avatar-nome {
+  display: flex;
+  align-items: center;
+
+  padding-left: 50px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.avatar-side {
+  margin-right: 20px;
+}
+
+
+.nome-usuario {
+  color: var(--ion-color-light-rgb);
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.nivel-usuario {
+  font-weight: bold;
+  color: var(--ion-color-tertiary);
+  margin: 0;
+}
